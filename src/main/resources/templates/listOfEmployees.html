@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page of employee app</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" th:href="@{/}">Add Employee</a>
+            <a class="nav-item nav-link active" th:href="@{/listOfEmployees}">List of employees</a>
+        </div>
+    </div>
+
+
+</nav>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Birth date</th>
+            <th scope="col">Employment date</th>
+            <th scope="col">Department</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="employee : ${list}">
+                <td th:text="${employee.id}"></td>
+                <td th:text="${employee.name}"></td>
+                <td th:text="${employee.lastName}"></td>
+                <td th:text="${employee.email}"></td>
+                <td th:text="${employee.street}+ ', ' + ${employee.city}"></td>
+                <td th:text="${employee.gender}" ></td>
+                <td th:text="${#dates.format(employee.birthDate, 'dd-MM-yyyy')}"></td>
+                <td th:text="${#dates.format(employee.dateOfEmployment, 'dd-MM-yyyy')}"></td>
+                <td th:text="${employee.department}" ></td>
+                <td><a th:text="UPDATE" th:href="@{${employee.id} + '/update'}"/></td>
+                <td><a th:text="DELETE" th:href="@{${employee.id} + '/delete'}"/></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+</body>
+</html>
