@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
 @Controller
 public class EmployeeController {
@@ -39,7 +38,6 @@ public class EmployeeController {
 
     @GetMapping("{id}/delete")
     public String deleteEmployee(@PathVariable Long id){
-        log.println("Deleting employee with ID: " + id);
         employeeRepo.deleteById(id);
         return "redirect:/listOfEmployees";
     }
@@ -48,7 +46,6 @@ public class EmployeeController {
     public String updateEmployee(@PathVariable Long id, Model model){
         Employee employee = employeeRepo.findById(id).get();
         model.addAttribute("employeeObject", employee);
-        log.println("Updating employee with id: " + id);
         return "update";
     }
 }
