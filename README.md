@@ -1,5 +1,5 @@
 # Simple Employee CRUD app
-## Simple employee CRUD app represents simple tasks like CREATE, READ, UPDATE and DELETE of employees made with Java, Spring, thymeleaf, JPA.
+## Simple employee CRUD app represents simple tasks like CREATE, READ, UPDATE and DELETE of employees made with Java 8, Spring MVC, thymeleaf, BOOTSTRAP JPA, H2
 
 
 
