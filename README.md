@@ -16,6 +16,6 @@
 
 
 
-### List of employees
+### List of sample employees
 ![list](https://user-images.githubusercontent.com/43884194/74267156-d57aee00-4d05-11ea-81c8-9bb8687803df.PNG)
 
