@@ -10,7 +10,7 @@
 
 
 
-### Update employee with hvalidation(works also for adding)
+### Update employee with validation(works also for adding)
 ![update](https://user-images.githubusercontent.com/43884194/74267155-d57aee00-4d05-11ea-9900-66ddd65622aa.PNG)
 
 
